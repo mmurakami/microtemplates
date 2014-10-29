@@ -5,10 +5,16 @@
 (function(globals) {
   // By default, Underscore uses ERB-style template delimiters, change the
   // following template settings to use alternative delimiters.
+  // var settings = {
+  //   evaluate    : /<%([\s\S]+?)%>/g,
+  //   interpolate : /<%=([\s\S]+?)%>/g,
+  //   escape      : /<%-([\s\S]+?)%>/g
+  // };
+  // TODO: THIS SHOULD BE OPTIONS
   var settings = {
-    evaluate    : /<%([\s\S]+?)%>/g,
-    interpolate : /<%=([\s\S]+?)%>/g,
-    escape      : /<%-([\s\S]+?)%>/g
+        evaluate    : /<\$([\s\S]+?)\$>/g,
+        interpolate : /<\$=([\s\S]+?)\$>/g,
+        escape      : /<\$-([\s\S]+?)\$>/g
   };
 
   // When customizing `templateSettings`, if you don't want to define an
